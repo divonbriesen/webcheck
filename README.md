@@ -14,3 +14,4 @@ For evalualating student work
 
 # Attendance
 - Muhammad was here: 12pm
+- Jaime was here: 12pm
