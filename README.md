@@ -12,5 +12,5 @@ For evalualating student work
 - check for introduction.htm or .html
 - check for contract.html or .html
 
-##Attendance
+# Attendance
 - Muhammad was here: 12pm
