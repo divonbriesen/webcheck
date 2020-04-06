@@ -33,6 +33,67 @@
         <div id='output'>
             <p><b>Output:</b></p>
         </div>
+
+        <!DOCTYPE html>
+        <html>
+        <body>
+        
+        <h2>HTML Forms</h2>
+        
+        <form>
+          <label for="fname">Full Name:</label>
+          
+          <input type="text" id="fullname" name="fullname" value="Frank Lopez">
+          <label for="lname">Login Id:</label>
+          
+          <input type="text" id="loginid" name="loginid" value="flopez10"> 
+          <input type="button" onclick = "myFunction()" value = "Run me!!">
+        
+        </form> 
+        
+        
+        
+        <div id = "outputfield" style = "color: green; font-size: 200%;">
+        Please enter values and hit the run button.
+        
+        </div>
+        
+        
+        <script>
+        
+        function myFunction() 
+        {
+          //document.getElementById("demo").innerHTML = "Hello00000 World";
+        
+        
+        var aFullNameField = document.getElementById("fullname");
+        var aLoginIdField = document.getElementById("loginid");
+        
+        var fullName = aFullNameField.value;
+        var loginId = aLoginIdField.value;
+        
+        var outputField = document.getElementById("outputfield");
+        
+        var webspacePrefix = "http://students.cpcc.edu/~"
+        var fullWebspaceURL = webspacePrefix + loginId + "/";
+        
+        var outputString = "Student Name is: " + fullName + ".<br/>";
+        
+        outputString += "Webspace is: ";
+        
+        outputString += "<a href = \"" + fullWebspaceURL + "\">" + fullWebspaceURL + "</a>";
+        
+        outputField.innerHTML = outputString;
+        
+        }
+        
+        </script>
+        
+        </body>
+        </html>
+
+
+
     </main>
 
     <footer>
