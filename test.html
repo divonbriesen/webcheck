@@ -70,7 +70,9 @@ function runResults()
 {
 
     var currentUserLogin = document.getElementById("loginid").value;
-    var message = "Web Page Setup & Progress for " + currentUserLogin + ":";
+    var currentUserCourse = document.getElementById("course").value;
+    baseCourseURL = "/" + currentUserCourse + "/";
+    var message = currentUserCourse + " Progress for " + currentUserLogin + ":";
 
     document.getElementById("displayid").innerHTML = message;
 
@@ -151,9 +153,10 @@ function makeIframes()
 
 
 <input type = "text" name = "loginid" value = "jscott52" id = "loginid">
-<input type = "button" value = "Do It!" onclick = "runResults()"> <h1 id = "displayid">Web Page Progress Checker for...       Enter login id: 
-       
-    </h1> 
+<input type = "text" name = "course" value = "web110" id = "course">
+
+<input type = "button" value = "Do It!" onclick = "runResults()"> 
+<h1 id = "displayid">Web Page Progress Checker for...   Enter login id: </h1> 
     <p> Application will accept user id's and then test several things from their page to see if they are properly set up. This version loads things into an iframe - so you have to manually see if they are there.
     </p>
 
