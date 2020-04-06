@@ -12,6 +12,20 @@ For evalualating student work
 - check for introduction.htm or .html
 - check for contract.html or .html
 
+
+# Proposed steps
+- have a field that allows the user to paste in a bunch of id's separated by commas, and put them into an array
+- loop thru that array and list out the url's
+- make those url's clickable links
+- establish that the webspace is created - so the url is valid : e.g. http://students.cpcc.edu/~userid
+        - figure out how to get a return value from each
+
+
+
+
+
+
+
 # Attendance
 - Muhammad was here: 12pm
 - Frank is here: 12pm
