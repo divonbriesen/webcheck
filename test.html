@@ -83,10 +83,10 @@ function runResults()
     for(var i = 0; i < listOfURLs.length; i++)
     {
         var currentURL = listOfURLs[i];
-        console.log(i + ") " + currentURL + "\n");
+        console.log(i + ") " + currentURL + "\n"); //OutPut as clickable link
 
         var aHeading = document.createElement("h3");
-        aHeading.innerHTML = "Loading: " + currentURL;
+        aHeading.innerHTML = "Loading: " + currentURL; // This line builds the string that displays on the screen
         document.body.appendChild(aHeading);
 
         var anIframe = document.createElement("iframe");
