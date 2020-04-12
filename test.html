@@ -1,6 +1,7 @@
-<html>
+<!DOCTYPE html>
+<html lang="EN">
 <head>
-
+    <title>Webchecker</title> <!--Frank added a doctype, lang, and title-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <style>
         body
@@ -17,7 +18,6 @@
             background-color: white;
         }
     </style>
-
     <script>
 
         var baseURL = "http://students.cpcc.edu/~";
@@ -86,13 +86,27 @@ function runResults()
         console.log(i + ") " + currentURL + "\n"); //OutPut as clickable link
 
         var aHeading = document.createElement("h3");
-        aHeading.innerHTML = "Loading: " + currentURL; // This line builds the string that displays on the screen
+        aHeading.innerHTML = "<a href = \"" + currentURL + "\"> Click For " + currentURL + "</a>"; // This line builds the string that displays on the screen. Frank made changes in this line.
         document.body.appendChild(aHeading);
 
         var anIframe = document.createElement("iframe");
         anIframe.src = listOfURLs[i];
         document.body.appendChild(anIframe);
     }
+    /* Original code by DI. I (Frank) changed the code above to make the links clickable 
+    for(var i = 0; i < listOfURLs.length; i++)
+    {
+        var currentURL = listOfURLs[i];
+        console.log(i + ") " + currentURL + "\n"); //OutPut as clickable link
+
+        var aHeading = document.createElement("h3");
+        aHeading.innerHTML = "Loading: " + currentURL; // This line builds the string that displays on the screen
+        document.body.appendChild(aHeading);
+
+        var anIframe = document.createElement("iframe");
+        anIframe.src = listOfURLs[i];
+        document.body.appendChild(anIframe);
+    } */
 }
 
 /*
@@ -151,12 +165,12 @@ function makeIframes()
 -->
 
 
-
-<input type = "text" name = "loginid" value = "jscott52" id = "loginid">
-<input type = "text" name = "course" value = "web110" id = "course">
-
-<input type = "button" value = "Do It!" onclick = "runResults()"> 
-<h1 id = "displayid">Submit information in the form above.</h1> 
+<form>
+    <input type = "text" name = "loginid" value = "jscott52" id = "loginid">
+    <input type = "text" name = "course" value = "web110" id = "course">
+    <input type = "button" value = "Do It!" onclick = "runResults()"> 
+</form> <!--Frank added form element-->
+    <h1 id = "displayid">Submit information in the form above.</h1> 
     <p> Application will accept user id's and then test several things from their page to see if they are properly set up. This version loads things into an iframe - so you have to manually see if they are there.
     </p>
 
